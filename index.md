@@ -34,9 +34,7 @@ body {
   color: #f1f1f1;
 }
 
-.main {
-  margin-left: 70px; /* Same as the width of the sidenav */
-  padding: 0px 10px;
+
 }
 
 @media screen and (max-height: 450px) {
@@ -102,7 +100,7 @@ body {
 </div>
 
 <div class="content">
-<h1>ABOUT!</h1>
+<h1>ABOUT</h1>
 <p><b>kaithope</b>, more commonly known by the username <b>grinnykat</b>, is a self-taught artist aspiring to one day make games. Also is trying to just get by and graduate high school.</p>
 <p>Currently has two ongoing webcomics on <b>Webtoon Discover</b>, <b>Starry Edelweiss</b> and <b>Mercy of Tomorrow</b>. (both are updated irregularly at the moment)</p>
 </div>
@@ -134,5 +132,3 @@ body {
   <li>went through something called the Calem Phase which I still don't regret</li>
   <li>will fight anyone who thinks Vocaloid songs are bad songs</li>
 </ul>
-  </div>
-</div>
