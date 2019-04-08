@@ -102,7 +102,7 @@ body {
 </div>
 
 <div class="content">
-<h1>ABOUT</h1>
+<h1>ABOUT!</h1>
 <p><b>kaithope</b>, more commonly known by the username <b>grinnykat</b>, is a self-taught artist aspiring to one day make games. Also is trying to just get by and graduate high school.</p>
 <p>Currently has two ongoing webcomics on <b>Webtoon Discover</b>, <b>Starry Edelweiss</b> and <b>Mercy of Tomorrow</b>. (both are updated irregularly at the moment)</p>
 </div>
