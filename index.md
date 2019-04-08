@@ -52,7 +52,6 @@ body {
 }
 
 .container {
-  position: fixed;
   border: 3px solid #FFFFFF;
   background-color: #FFC89C;
   border-top-left-radius: 4px;
@@ -61,7 +60,6 @@ body {
 }
 
 .container2 {
-  position: fixed;
   border: 3px solid #FFFFFF;
   background-color: #FFC89C;
   border-top-left-radius: 4px;
