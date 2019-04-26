@@ -100,12 +100,13 @@ body {
 </div>
 
 <div class="content">
+  
+  
 <h1>ABOUT</h1>
 <p><b>kaithope</b>, more commonly known by the username <b>grinnykat</b>, is a self-taught artist aspiring to one day make games. Also is trying to just get by and graduate high school.</p>
 <p>Currently has one ongoing webcomic on <b>Webtoon Discover</b>, <b>Starry Edelweiss</b>. (updated irregularly at the moment)</p>
 </div>
 </div>
-<img src="healinghope-default.gif" alt="HealingHope Default" style="float:right">
 <br>
 <br>
 
