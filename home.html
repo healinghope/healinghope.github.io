@@ -1,0 +1,194 @@
+<body style="background-color:#FFFFFF;">
+<font style="font-family:gill sans light;">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+  /* Sidebar code */
+body {
+  font-family: gill sans light;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFDFBA;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #75665F;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FFF3C0;
+}
+
+/* this is for the sidebar entirely */
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* This is for the images */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 50%;
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* my dumbhead might not remember but this is a button */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #FFDFBA;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #FFF3C0;
+}
+
+.btn:active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+
+
+<body>
+
+
+<div class="sidenav">
+  <img src="it me.png" style="padding: 0px 15">
+  <p></p>
+  <a href="home.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="main">
+
+<!--HEADER-->
+<div class="header" id="myHeader">
+  <h1>Portfolio</h1>
+  <button class="btn active" onclick="four()">S</button>
+  <button class="btn" onclick="two()">M</button>
+  <button class="btn" onclick="one()">L</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="woa.png" style="width:100%">
+    <img src="priestess.png" style="width:100%">
+    <img src="ugh.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="line art.png" style="width:100%">
+    <img src="line art 2.png" style="width:100%">
+    <img src="clock game design.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="clair.png" style="width:100%">
+    <img src="bby.png" style="width:100%">
+    <img src="ugh.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="ty.png" style="width:100%">
+    <img src="i know its been hard but im proud of you for making it.png" style="width:100%">
+    <img src="la vie.png" style="width:100%">
+</div>
+
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
