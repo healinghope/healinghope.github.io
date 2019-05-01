@@ -1,4 +1,4 @@
-<body style="background-color:#FFF3DE;">
+<body style="background-color:#FFFFFF;">
 <font style="font-family:gill sans light;">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -6,7 +6,7 @@
 
   /* Sidebar code */
 body {
-  font-family: "Lato", sans-serif;
+  font-family: gill sans light;
 }
 
 .sidenav {
@@ -30,7 +30,7 @@ body {
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #FFF3C0;
 }
 
 /* this is for the sidebar entirely */
@@ -45,51 +45,64 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
-
-/* Flipcard */
-.IDc {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
+/* This is for the images */
+* {
+  box-sizing: border-box;
 }
 
-.IDc-flipped {
-  position: relative;
-  width: 100%;
-  height: 100%;
+body {
+  margin: 0;
+}
+
+.header {
   text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 32px;
 }
 
-.IDc:hover .IDc-flipped {
-  transform: rotateY(180deg);
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-.IDc-front, .IDc-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.column {
+  -ms-flex: 50%;
+  flex: 50%;
+  padding: 0 4px;
 }
 
-.IDc-front {
-  background-color: #bbb;
-  color: black;
-  z-index: 2;
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
 
-.IDc-back {
-  background-color: #F0D0C0;
+/* my dumbhead might not remember but this is a button */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #FFDFBA;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #FFF3C0;
+}
+
+.btn:active {
+  background-color: #666;
   color: white;
-  transform: rotateY(180deg);
-  z-index: 1;
 }
 </style>
 </head>
+
+
 <body>
+
 
 <div class="sidenav">
   <a href="#Home">Home</a>
@@ -97,35 +110,82 @@ body {
   <a href="#contact">Contact</a>
 </div>
 
-<div class="IDc">
-  <div class="IDc-flipped">
-    <div class="IDc-front">
-      <img src="it me.png" alt="its me" style="width:300px; height:300px;">
-    </div>
-    <div class="IDc-back">
-      <h1>About</h1>
-      <p>wassup</p>
-    </div>
-  </div>
+<div class="main">
+
+<!--HEADER-->
+<div class="header" id="myHeader">
+  <h1>Portfolio</h1>
+  <button class="btn active" onclick="four()">S</button>
+  <button class="btn" onclick="two()">M</button>
+  <button class="btn" onclick="one()">L</button>
 </div>
 
-<div class="main">
-  
-<h1>ABOUT</h1>
-<p><b>Kaitlyn Francisco (kaithope)</b>, more commonly known by the username <b>grinnykat</b>, is a self-taught artist aspiring to one day make games. Also is trying to just get by and graduate high school.</p>
-<p>Currently has one ongoing webcomic on <b>Webtoon Discover</b>, <b>Starry Edelweiss</b>. (updated irregularly at the moment)</p>
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="woa.png" style="width:100%">
+    <img src="priestess.png" style="width:100%">
+    <img src="ugh.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="line art.png" style="width:100%">
+    <img src="line art 2.png" style="width:100%">
+    <img src="clock game design.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="clair.png" style="width:100%">
+    <img src="bby.png" style="width:100%">
+    <img src="ugh.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="ty.png" style="width:100%">
+    <img src="i know its been hard but im proud of you for making it.png" style="width:100%">
+    <img src="la vie.png" style="width:100%">
+</div>
 
-<ul>
-  <li>proud to be INC!!</li>
-  <li>I think baby chicks are adorable for one reason</li>
-  <li>game series I'm into + my favorite:</li>
-  <ul>
-    <li>Pokemon // X</li>
-    <li>Fire Emblem // Awakening</li>
-    <li>Animal Crossing // New leaf</li>
-    <li>Hello Charlotte // Ep. 1</li>
-  </ul>
-  <li>filipina, but can barely understand Tagalog and can't speak it at all</li>
-  <li>went through something called the Calem Phase which I still don't regret</li>
-  <li>will fight anyone who thinks Vocaloid songs are bad songs</li>
-</ul>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
